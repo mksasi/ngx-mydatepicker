@@ -1,6 +1,8 @@
 # ngx-mydatepicker
 
-## New version of the component is here: [repository](https://github.com/kekeh/angular-mydatepicker) and [online demo](https://kekeh.github.io/angular-mydatepicker/) 
+__If your Angular version is >= 7.2 you can use a new version ([angular-mydatepicker](https://github.com/kekeh/angular-mydatepicker)) of this component:__ 
+* [repository](https://github.com/kekeh/angular-mydatepicker) 
+* [online demo](https://kekeh.github.io/angular-mydatepicker/) 
 
 **Angular date picker**
 

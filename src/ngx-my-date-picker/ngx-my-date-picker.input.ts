@@ -1,4 +1,4 @@
-import { Directive, Input, ComponentRef, ElementRef, ViewContainerRef, Renderer, ChangeDetectorRef, ComponentFactoryResolver, forwardRef, EventEmitter, Output, SimpleChanges, OnChanges, HostListener, OnDestroy } from "@angular/core";
+import { Directive, Input, ComponentRef, ElementRef, ViewContainerRef,ChangeDetectorRef, ComponentFactoryResolver, forwardRef, EventEmitter, Output, SimpleChanges, OnChanges, HostListener, OnDestroy } from "@angular/core";
 import { AbstractControl, ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator } from "@angular/forms";
 
 import { IMyDate, IMyOptions, IMyDateModel, IMyCalendarViewChanged, IMyInputFieldChanged, IMySelectorPosition } from "./interfaces/index";
@@ -48,7 +48,6 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
     constructor(private utilService: UtilService,
                 private vcRef: ViewContainerRef,
                 private cfr: ComponentFactoryResolver,
-                private renderer: Renderer,
                 private cdr: ChangeDetectorRef,
                 private elem: ElementRef,
                 private config: NgxMyDatePickerConfig) {
@@ -162,8 +161,15 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
 
     public setDisabledState(isDisabled: boolean): void {
         this.disabled = isDisabled;
-        this.renderer.setElementProperty(this.elem.nativeElement, "disabled", isDisabled);
+        const {nativeElement} = this.elem;
 
+        if (isDisabled) {
+            nativeElement.setAttribute("disabled", "");
+        }
+        else {
+            nativeElement.removeAttribute("disabled");
+        }
+  
         if (isDisabled) {
             this.closeCalendar();
         }
@@ -279,7 +285,7 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
 
     private setInputValue(value: string): void {
         this.inputText = value;
-        this.renderer.setElementProperty(this.elem.nativeElement, "value", value);
+        this.elem.nativeElement.setAttribute("value", value);
     }
 
     private focusToInput(): void {

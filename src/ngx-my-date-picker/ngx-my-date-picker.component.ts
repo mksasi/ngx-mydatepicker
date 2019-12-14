@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewEncapsulation, ViewChild, Renderer, ChangeDetectorRef, OnDestroy } from "@angular/core";
+import { Component, ElementRef, ViewEncapsulation, ViewChild, ChangeDetectorRef, OnDestroy } from "@angular/core";
 import { IMyDate, IMyMonth, IMyCalendarDay, IMyCalendarMonth, IMyCalendarYear, IMyWeek, IMyOptions, IMySelectorPosition } from "./interfaces/index";
 import { UtilService } from "./services/ngx-my-date-picker.util.service";
 import { KeyCode } from "./enums/key-code.enum";
@@ -51,24 +51,34 @@ export class NgxMyDatePicker implements OnDestroy {
     currMonthId: number = MonthId.curr;
     nextMonthId: number = MonthId.next;
 
-    clickListener: Function;
-
-    constructor(public elem: ElementRef, private renderer: Renderer, private cdr: ChangeDetectorRef, private utilService: UtilService) {
-        this.clickListener = renderer.listen(elem.nativeElement, "click", (evt: MouseEvent) => {
-            if ((this.opts.monthSelector || this.opts.yearSelector) && evt.target) {
-                this.resetMonthYearSelect();
-            }
-        });
-    }
+    constructor(public elem: ElementRef, private cdr: ChangeDetectorRef, private utilService: UtilService) { }
 
     ngOnDestroy(): void {
-        this.clickListener();
+        this.removeListener();
+    }
+
+    onClickListener = (evt: MouseEvent) => this.onClick(evt);
+
+    addListener(): void {
+        this.elem.nativeElement.addEventListener("click", this.onClickListener);
+    }
+
+    removeListener(): void {
+        this.elem.nativeElement.removeEventListener("click", this.onClickListener);
+    }
+
+    onClick(evt: MouseEvent): void {
+        if ((this.opts.monthSelector || this.opts.yearSelector) && evt.target) {
+            this.resetMonthYearSelect();
+        }
     }
 
     initialize(opts: IMyOptions, defaultMonth: string, selectorPos: IMySelectorPosition, inputValue: string, dc: Function, cvc: Function, cbe: Function): void {
         this.opts = opts;
         this.selectorPos = selectorPos;
         this.weekDays.length = 0;
+
+        this.addListener();
 
         this.isTodayDisabled();
         this.dayIdx = this.weekDayOpts.indexOf(this.opts.firstDayOfWeek);

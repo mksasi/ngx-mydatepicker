@@ -1,8 +1,4 @@
-import {
-	Component,
-	OnInit,
-	Renderer,
-} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {INgxMyDpOptions} from '../../src/ngx-my-date-picker/interfaces';
 
@@ -23,8 +19,7 @@ export class SampleDatePickerReacticeForms implements OnInit {
 
     private myForm: FormGroup;
 
-    constructor(private formBuilder: FormBuilder,
-	            private renderer: Renderer) { }
+    constructor(private formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
         console.log('onInit(): SampleDatePickerReacticeForms');

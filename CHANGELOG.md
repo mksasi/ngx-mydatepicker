@@ -1,3 +1,14 @@
+# 2.4.10 (2019-12-14)
+
+### Bug Fixes
+
+* -
+
+### Features
+
+* - Renderer removed.
+
+
 # 2.4.9 (2018-08-21)
 
 ### Bug Fixes
