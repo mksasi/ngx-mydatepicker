@@ -1,0 +1,21 @@
+{
+  "name": "ngx-mydatepicker",
+  "version": "9.0.0",
+  "description": "Angular datepicker",
+  "homepage": "https://kekeh.github.io/ngx-mydatepicker/",
+  "keywords": [
+    "Angular",
+    "datepicker"
+  ],
+  "author": "kekeh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kekeh/ngx-mydatepicker.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0"
+  }
+}

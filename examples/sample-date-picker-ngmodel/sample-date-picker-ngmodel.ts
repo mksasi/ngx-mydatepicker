@@ -1,13 +1,11 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {INgxMyDpOptions, IMyDateModel, IMyInputFieldChanged, IMyCalendarViewChanged, IMyMarkedDate, IMyDate, IMyDefaultMonth} from '../../src/ngx-my-date-picker/interfaces';
-import {NgxMyDatePickerDirective} from '../../src/ngx-my-date-picker';
-
-declare var require:any;
-const normalSampleTpl: string = require('./sample-date-picker-ngmodel.html');
+import {INgxMyDpOptions, IMyDateModel, IMyInputFieldChanged, IMyCalendarViewChanged, IMyMarkedDate, IMyDate, IMyDefaultMonth} from '../../projects/ngx-mydatepicker/src/lib/interfaces';
+import {NgxMyDatePickerDirective} from '../../projects/ngx-mydatepicker/src/lib/ngx-mydatepicker.input';
 
 @Component({
     selector: 'sample-date-picker-ngmodel',
-    template: normalSampleTpl
+    styleUrls: ['./sample-date-picker-ngmodel.css'],
+    templateUrl: './sample-date-picker-ngmodel.html'
 })
 
 export class SampleDatePickerNgModel implements OnInit {

@@ -1,18 +1,27 @@
 # ngx-mydatepicker
 
+**New datepicker library**
+
 __If your Angular version is >= 7.2 you can use a new version ([angular-mydatepicker](https://github.com/kekeh/angular-mydatepicker)) of this component:__ 
 * [repository](https://github.com/kekeh/angular-mydatepicker) 
 * [online demo](https://kekeh.github.io/angular-mydatepicker/) 
 
+**Version compatibility of this library**
+
+| Library version | Angular version | Branch | Installation |
+| :-------------- | :-------------- | :----- | :----------- |
+| < 9.0.0 | >= 2 and < 9 | master | npm install --save ngx-mydatepicker@latest| 
+| >= 9.0.0 | >= 9 | angularIvy | npm install --save ngx-mydatepicker@ng9 | 
+
+
 **Angular date picker**
 
 [![Build Status](https://travis-ci.org/kekeh/ngx-mydatepicker.svg?branch=master)](https://travis-ci.org/kekeh/ngx-mydatepicker)
-[![codecov](https://codecov.io/gh/kekeh/ngx-mydatepicker/branch/master/graph/badge.svg)](https://codecov.io/gh/kekeh/ngx-mydatepicker)
 [![npm](https://img.shields.io/npm/v/ngx-mydatepicker.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/ngx-mydatepicker)
 [![npm](https://img.shields.io/npm/dt/ngx-mydatepicker.svg)](https://www.npmjs.com/package/ngx-mydatepicker)
 
 ## Description
-Angular attribute directive date picker. Compatible __Angular2+__.
+Angular attribute directive date picker. Compatible Angular 9+.
 
 There is similar date picker [here](https://github.com/kekeh/mydatepicker), but difference between these
 two is that with the ngx-mydatepicker you can define the style of input box, calendar and clear buttons.
@@ -38,24 +47,6 @@ To install this component to an external project, follow the procedure:
         bootstrap:    [ MyTestApp ]
     })
     export class MyTestAppModule {}
-    ```
-
-3. If you are using __systemjs__ package loader add the following ngx-mydatepicker properties to the __System.config__:
-    ```js
-    (function (global) {
-        System.config({
-            paths: {
-                'npm:': 'node_modules/'
-            },
-            map: {
-                // Other components are here...
-
-                'ngx-mydatepicker': 'npm:ngx-mydatepicker/bundles/ngx-mydatepicker.umd.min.js'
-            },
-            packages: {
-            }
-        });
-    })(this);
     ```
     
 ## Usage
@@ -426,9 +417,9 @@ checkDateValidity(): void {
 Online demo is [here](http://kekeh.github.io/ngx-mydatepicker)
 
 ## Compatibility (tested with)
-* Firefox (latest)
-* Chrome (latest)
-* Chromium (latest)
+* Firefox
+* Chrome
+* Chromium
 * Edge
 * IE11
 * Safari

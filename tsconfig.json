@@ -1,25 +1,29 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "outDir": "build",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "removeComments": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitThis": true
-  },
-  "exclude": [
-    "node_modules",
-    "npmdist",
-    "package"
-  ],
   "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ngx-mydatepicker": [
+        "dist/ngx-mydatepicker/ngx-mydatepicker",
+        "dist/ngx-mydatepicker"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

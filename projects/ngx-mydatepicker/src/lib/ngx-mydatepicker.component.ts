@@ -1,19 +1,14 @@
+
 import { Component, ElementRef, ViewEncapsulation, ViewChild, ChangeDetectorRef, OnDestroy } from "@angular/core";
 import { IMyDate, IMyMonth, IMyCalendarDay, IMyCalendarMonth, IMyCalendarYear, IMyWeek, IMyOptions, IMySelectorPosition } from "./interfaces/index";
-import { UtilService } from "./services/ngx-my-date-picker.util.service";
+import { UtilService } from "./services/ngx-mydatepicker.util.service";
 import { KeyCode } from "./enums/key-code.enum";
 import { MonthId } from "./enums/month-id.enum";
 
-// webpack1_
-declare var require: any;
-const myDpStyles: string = require("./ngx-my-date-picker.component.css");
-const myDpTpl: string = require("./ngx-my-date-picker.component.html");
-// webpack2_
-
 @Component({
     selector: "ngx-my-date-picker",
-    styles: [myDpStyles],
-    template: myDpTpl,
+    styleUrls: ['./ngx-mydatepicker.component.css'],
+    templateUrl: './ngx-mydatepicker.component.html',
     providers: [UtilService],
     encapsulation: ViewEncapsulation.None
 })

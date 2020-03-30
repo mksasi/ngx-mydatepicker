@@ -1,13 +1,11 @@
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-
 import {FormsModule} from "@angular/forms";
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed, async} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {DebugElement, Component, ViewChild} from '@angular/core';
-import {NgxMyDatePickerModule} from './ngx-my-date-picker.module';
-import {NgxMyDatePickerDirective} from './ngx-my-date-picker.input';
+import {NgxMyDatePickerModule} from './ngx-mydatepicker.module';
+import {NgxMyDatePickerDirective} from './ngx-mydatepicker.input';
 import {IMyOptions} from "./interfaces/my-options.interface";
-import {NgxMyDatePickerConfig} from './services/ngx-my-date-picker.config';
+import {NgxMyDatePickerConfig} from './services/ngx-mydatepicker.config';
 
 let comp: NgxMyDatepickerTestComponent;
 let fixture: ComponentFixture<NgxMyDatepickerTestComponent>;
@@ -69,7 +67,7 @@ describe('ngx-mydatepicker', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [NgxMyDatepickerTestComponent],
-            imports: [FormsModule, NgxMyDatePickerModule],
+            imports: [FormsModule, NgxMyDatePickerModule.forRoot()],
             providers: [NgxMyDatePickerConfig]
         });
         fixture = TestBed.createComponent(NgxMyDatepickerTestComponent);
@@ -77,6 +75,7 @@ describe('ngx-mydatepicker', () => {
         de = fixture.debugElement.query(By.css('.myDateInput'));
         el = de.nativeElement;
     });
+
 
     it('test open/close/toggle calendar functions', () => {
         comp.openCalendar();
@@ -99,7 +98,7 @@ describe('ngx-mydatepicker', () => {
         selector = getElement('.selector');
         expect(selector).toBe(null);
     });
-
+    
     it('select today and clear date', () => {
         comp.openCalendar();
         fixture.detectChanges();
@@ -1651,9 +1650,6 @@ describe('ngx-mydatepicker', () => {
 
         comp.closeCalendar();
     });
+    
 });
-
-
-
-
 

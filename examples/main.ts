@@ -1,16 +1,12 @@
-import 'core-js/es6';
-import 'core-js/es7/reflect';
-require('zone.js/dist/zone');
-
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { SampleDatePickerModule } from './sample-date-picker-module';
+import { environment } from './environments/environment';
 
-
-if (process.env.ENV === 'production') {
-    enableProdMode();
+if (environment.production) {
+  enableProdMode();
 }
 
-
-platformBrowserDynamic().bootstrapModule(SampleDatePickerModule);
+platformBrowserDynamic().bootstrapModule(SampleDatePickerModule)
+  .catch(err => console.error(err));

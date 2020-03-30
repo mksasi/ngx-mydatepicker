@@ -1,13 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
-import {INgxMyDpOptions} from '../../src/ngx-my-date-picker/interfaces';
-
-declare var require:any;
-const amSampleTpl: string = require('./sample-date-picker-reactive-forms.html');
+import {INgxMyDpOptions} from '../../projects/ngx-mydatepicker/src/lib/interfaces';
 
 @Component({
     selector: 'sample-date-picker-reactive-forms',
-    template: amSampleTpl
+    styleUrls: ['./sample-date-picker-reactive-forms.css'],
+    templateUrl: './sample-date-picker-reactive-forms.html'
 })
 
 export class SampleDatePickerReacticeForms implements OnInit {

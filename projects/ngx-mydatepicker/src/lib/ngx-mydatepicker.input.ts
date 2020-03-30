@@ -2,9 +2,9 @@ import { Directive, Input, ComponentRef, ElementRef, ViewContainerRef,ChangeDete
 import { AbstractControl, ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator } from "@angular/forms";
 
 import { IMyDate, IMyOptions, IMyDateModel, IMyCalendarViewChanged, IMyInputFieldChanged, IMySelectorPosition } from "./interfaces/index";
-import { NgxMyDatePicker } from "./ngx-my-date-picker.component";
-import { UtilService } from "./services/ngx-my-date-picker.util.service";
-import { NgxMyDatePickerConfig } from "./services/ngx-my-date-picker.config";
+import { NgxMyDatePicker } from "./ngx-mydatepicker.component";
+import { UtilService } from "./services/ngx-mydatepicker.util.service";
+import { NgxMyDatePickerConfig } from "./services/ngx-mydatepicker.config";
 import { CalToggle } from "./enums/cal-toggle.enum";
 import { Year } from "./enums/year.enum";
 import { KeyCode } from "./enums/key-code.enum";

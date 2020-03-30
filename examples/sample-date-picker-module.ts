@@ -6,7 +6,7 @@ import {MyDatePickerApp} from './sample-date-picker-app';
 import {SampleDatePickerNgModel} from './sample-date-picker-ngmodel/sample-date-picker-ngmodel';
 import {SampleDatePickerReacticeForms} from './sample-date-picker-reactive-forms/sample-date-picker-reactive-forms';
 
-import {NgxMyDatePickerModule} from '../src/ngx-my-date-picker/ngx-my-date-picker.module';
+import {NgxMyDatePickerModule} from '../projects/ngx-mydatepicker/src/lib/ngx-mydatepicker.module';
 
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, FormsModule, NgxMyDatePickerModule.forRoot()],
