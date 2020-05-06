@@ -120,6 +120,7 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
 
     public ngOnDestroy(): void {
         this.closeCalendar();
+        document.removeEventListener("click", this.onClickWrapper);
     }
 
     public parseOptions(opts: IMyOptions): void {
