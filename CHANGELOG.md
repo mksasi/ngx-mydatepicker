@@ -18,3 +18,14 @@
 ### Features
 
 * none
+
+
+# 9.0.2 (2020-05-06)
+
+### Bug Fixes
+
+* Merged: [Ensure click event listener is always removed #184](Ensure click event listener is always removed #184)
+
+### Features
+
+* none

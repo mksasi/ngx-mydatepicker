@@ -276,9 +276,9 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
             this.vcRef.remove(this.vcRef.indexOf(this.cRef.hostView));
             this.cRef = null;
             this.emitCalendarToggle(reason);
-        }
 
-        document.removeEventListener("click", this.onClickWrapper);
+            document.removeEventListener("click", this.onClickWrapper);
+        }
     }
 
     private updateModel(model: IMyDateModel): void {
