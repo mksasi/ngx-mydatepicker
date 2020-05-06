@@ -1,3 +1,15 @@
+# 2.4.11 (2020-05-06)
+
+### Bug Fixes
+
+* - Merged: [Ensure click event listener is always removed #184](Ensure click event listener is always removed #184)
+
+### Features
+
+* - none
+
+
+
 # 2.4.10 (2019-12-14)
 
 ### Bug Fixes

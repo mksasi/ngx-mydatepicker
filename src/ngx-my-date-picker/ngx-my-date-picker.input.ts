@@ -218,6 +218,8 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
                 }
             );
             this.emitCalendarToggle(CalToggle.Open);
+
+            document.addEventListener("click", this.onClickWrapper);
         }
         setTimeout(() => {
             this.preventClose = false;
@@ -233,11 +235,9 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
             return;
         }
         if (this.cRef === null) {
-            document.addEventListener("click", this.onClickWrapper);
             this.openCalendar();
         }
         else {
-            document.removeEventListener("click", this.onClickWrapper);
             this.closeSelector(CalToggle.CloseByCalBtn);
         }
     }
@@ -275,6 +275,8 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
             this.vcRef.remove(this.vcRef.indexOf(this.cRef.hostView));
             this.cRef = null;
             this.emitCalendarToggle(reason);
+
+            document.removeEventListener("click", this.onClickWrapper);
         }
     }
 

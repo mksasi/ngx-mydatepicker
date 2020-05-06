@@ -5,3 +5,6 @@ build-example/
 test-output/
 npmdist/
 .tmpbuild/
+
+
+package-lock.json
