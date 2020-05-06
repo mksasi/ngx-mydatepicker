@@ -119,6 +119,7 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
     }
 
     public ngOnDestroy(): void {
+        document.removeEventListener("click", this.onClickWrapper);
         this.closeCalendar();
     }
 
@@ -190,6 +191,7 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
         if (this.disabled) {
             return;
         }
+
         this.preventClose = true;
         this.cdr.detectChanges();
         if (this.cRef === null) {
@@ -217,6 +219,8 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
                 }
             );
             this.emitCalendarToggle(CalToggle.Open);
+
+            document.addEventListener("click", this.onClickWrapper);
         }
         setTimeout(() => {
             this.preventClose = false;
@@ -232,11 +236,9 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
             return;
         }
         if (this.cRef === null) {
-            document.addEventListener("click", this.onClickWrapper);
             this.openCalendar();
         }
         else {
-            document.removeEventListener("click", this.onClickWrapper);
             this.closeSelector(CalToggle.CloseByCalBtn);
         }
     }
@@ -269,12 +271,14 @@ export class NgxMyDatePickerDirective implements OnChanges, OnDestroy, ControlVa
         return keyCode === KeyCode.leftArrow || keyCode === KeyCode.rightArrow || keyCode === KeyCode.upArrow || keyCode === KeyCode.downArrow || keyCode === KeyCode.tab || keyCode === KeyCode.shift;
     }
 
-    private closeSelector(reason: number): void {
+    private closeSelector(reason: number): void {    
         if (this.cRef !== null) {
             this.vcRef.remove(this.vcRef.indexOf(this.cRef.hostView));
             this.cRef = null;
             this.emitCalendarToggle(reason);
         }
+
+        document.removeEventListener("click", this.onClickWrapper);
     }
 
     private updateModel(model: IMyDateModel): void {
