@@ -13,7 +13,7 @@ import { NgxMyDatePickerConfig } from "./services/ngx-mydatepicker.config";
     exports: [NgxMyDatePicker, NgxMyDatePickerDirective, FocusDirective]
 })
 export class NgxMyDatePickerModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<NgxMyDatePickerModule> {
         return {
             ngModule: NgxMyDatePickerModule,
             providers: [NgxMyDatePickerConfig]

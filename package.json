@@ -1,17 +1,17 @@
 {
-  "name": "ngx-mydatepicker-example",
-  "version": "9.0.2",
-  "description": "Angular datepicker",
-  "homepage": "https://kekeh.github.io/ngx-mydatepicker/",
+  "name": "@mksasi/ngx-mydatepicker",
+  "version": "12.0.0",
+  "description": "Angular datepicker forked from kekeh",
+  "homepage": "https://github.com/mksasi/ngx-mydatepicker/",
   "keywords": [
     "Angular",
     "datepicker"
   ],
-  "author": "kekeh",
+  "author": "mksasi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kekeh/ngx-mydatepicker.git"
+    "url": "https://github.com/mksasi/ngx-mydatepicker.git"
   },
   "scripts": {
     "ng": "ng",
@@ -24,14 +24,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.0.5",
-    "@angular/common": "~9.0.5",
-    "@angular/compiler": "~9.0.5",
-    "@angular/core": "~9.0.5",
-    "@angular/forms": "~9.0.5",
-    "@angular/platform-browser": "~9.0.5",
-    "@angular/platform-browser-dynamic": "~9.0.5",
-    "@angular/router": "~9.0.5",
+    "@angular/animations": "~12.0.0",
+    "@angular/common": "~12.0.0",
+    "@angular/compiler": "~12.0.0",
+    "@angular/core": "~12.0.0",
+    "@angular/forms": "~12.0.0",
+    "@angular/platform-browser": "~12.0.0",
+    "@angular/platform-browser-dynamic": "~12.0.0",
+    "@angular/router": "~12.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -39,9 +39,9 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.7",
     "@angular-devkit/build-ng-packagr": "~0.900.7",
-    "@angular/cli": "~9.0.5",
-    "@angular/compiler-cli": "~9.0.5",
-    "@angular/language-service": "~9.0.5",
+    "@angular/cli": "~12.0.0",
+    "@angular/compiler-cli": "~12.0.0",
+    "@angular/language-service": "~12.0.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -57,7 +57,7 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5",
+    "typescript": "~4.2.4",
     "codecov": "^3.5.0",
     "fs-extra": "^8.0.1",
     "tsickle": "~0.34.0"

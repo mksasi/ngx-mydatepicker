@@ -1,21 +1,21 @@
 {
-  "name": "ngx-mydatepicker",
-  "version": "9.0.2",
-  "description": "Angular datepicker",
-  "homepage": "https://kekeh.github.io/ngx-mydatepicker/",
+  "name": "@mksasi/ngx-mydatepicker",
+  "version": "12.0.0",
+  "description": "Angular datepicker forked from kekeh",
+  "homepage": "https://github.com/mksasi/ngx-mydatepicker/",
   "keywords": [
     "Angular",
     "datepicker"
   ],
-  "author": "kekeh",
+  "author": "mksasi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kekeh/ngx-mydatepicker.git"
+    "url": "https://github.com/mksasi/ngx-mydatepicker.git"
   },
   "peerDependencies": {
-    "@angular/common": "^9.0.7",
-    "@angular/core": "^9.0.7",
+    "@angular/common": "^11.x.x",
+    "@angular/core": "^11.x.x",
     "tslib": "^1.10.0"
   }
 }
