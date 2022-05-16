@@ -28,18 +28,6 @@
             "tsConfig": "projects/ngx-mydatepicker/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-mydatepicker/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-mydatepicker/tsconfig.lib.json",
-              "projects/ngx-mydatepicker/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -79,7 +67,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,

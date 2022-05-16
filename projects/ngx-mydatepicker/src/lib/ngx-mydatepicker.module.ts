@@ -9,7 +9,6 @@ import { NgxMyDatePickerConfig } from "./services/ngx-mydatepicker.config";
 @NgModule({
     imports: [CommonModule, FormsModule],
     declarations: [NgxMyDatePicker, NgxMyDatePickerDirective, FocusDirective],
-    entryComponents: [NgxMyDatePicker],
     exports: [NgxMyDatePicker, NgxMyDatePickerDirective, FocusDirective]
 })
 export class NgxMyDatePickerModule {
